@@ -1,0 +1,97 @@
+.modal-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+.group-container {
+  width: 480px;
+  background: #fff;
+  border: 2px solid #2f80ed;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+}
+
+.popup-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.group-names,.color{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+  
+}
+
+.group-names input{
+  border: 2px solid gray;
+  padding: 5px 6px;
+  border-radius: 10px;
+  }
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-dot:hover {
+  border-color: #333;
+}
+
+.orange {
+  background: orange;
+}
+.blue {
+  background: #16008b;
+}
+.pink {
+  background: pink;
+}
+.yellow {
+  background: yellow;
+}
+.lightgreen {
+  background: lightgreen;
+}
+.aqua {
+  background: aqua;
+}
+
+.create {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-btn {
+  background: #16008b;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
