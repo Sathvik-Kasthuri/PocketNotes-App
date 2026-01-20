@@ -1,97 +1,107 @@
 .modal-popup {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 1000;
 }
 
 .group-container {
-  width: 480px;
-  background: #fff;
-  border: 2px solid #2f80ed;
-  border-radius: 6px;
-  padding: 10px 20px;
+  width: 740px;
+  height: 317px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
   box-sizing: border-box;
-
+  position: relative;
 }
 
-.popup-title{
+.popup-title {
+  width: 248px;
+  height: 46px;
+  font-size: 29px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 30px 0;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+}
+
+.group-names,
+.color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
   gap: 20px;
-  padding: 10px;
-  font-size: 20px;
 }
 
-.group-names,.color{
+.group-names h3 {
+  width: 162px;
+  height: 44px;
+  margin: 0;
+  font-size: 27.31px;
+  font-weight: 500;
+  color: #000000;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 25px;
-  padding: 10px;
-  
+}
+.color h3 {
+  width: 189px;
+  height: 44px;
+  margin: 0;
+  font-size: 27.31px;
+  font-weight: 500;
+  color: #000000;
+  display: flex;
+  align-items: center;
 }
 
-.group-names input{
-  border: 2px solid gray;
-  padding: 5px 6px;
-  border-radius: 10px;
-  }
+.group-names input {
+  width: 435px;
+  height: 51px;
+  border-radius: 22px;
+  border: 2px solid #cccccc;
+  padding: 0 20px;
+  font-size: 20px;
+  outline: none;
+}
 
 .color-options {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  padding-left: 10px;
 }
 
 .color-dot {
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.color-dot:hover {
-  border-color: #333;
-}
-
-.orange {
-  background: orange;
-}
-.blue {
-  background: #16008b;
-}
-.pink {
-  background: pink;
-}
-.yellow {
-  background: yellow;
-}
-.lightgreen {
-  background: lightgreen;
-}
-.aqua {
-  background: aqua;
-}
-
 .create {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
 }
 
 .create-btn {
-  background: #16008b;
-  color: white;
-
+  width: 154px;
+  height: 38px;
+  background-color: #001f8b;
   border: none;
-  border-radius: 6px;
-
-  padding: 6px 16px;
-  font-size: 13px;
+  border-radius: 11px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
+}
+
+.color-dot.active {
+  border: 3px solid #0047ff;
+  box-sizing: border-box;
 }

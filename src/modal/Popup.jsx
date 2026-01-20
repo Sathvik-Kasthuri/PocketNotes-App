@@ -12,9 +12,9 @@ const Popup = ({ addGroup, close }) => {
   };
 
   return (
+    
     <div className="modal-popup" onClick={close}>
       <div className="group-container" onClick={(e) => e.stopPropagation()}>
-
         <h3 className="popup-title">Create New group</h3>
 
         <div className="group-names">
@@ -30,30 +30,21 @@ const Popup = ({ addGroup, close }) => {
         <div className="color">
           <h3>Choose Colour</h3>
           <div className="color-options">
-            <span
-              onClick={() => setColor("orange")}
-              className="color-dot orange"
-            ></span>
-            <span
-              onClick={() => setColor("blue")}
-              className="color-dot blue"
-            ></span>
-            <span
-              onClick={() => setColor("pink")}
-              className="color-dot pink"
-            ></span>
-            <span
-              onClick={() => setColor("yellow")}
-              className="color-dot yellow"
-            ></span>
-            <span
-              onClick={() => setColor("lightgreen")}
-              className="color-dot lightgreen"
-            ></span>
-            <span
-              onClick={() => setColor("aqua")}
-              className="color-dot aqua"
-            ></span>
+            {[
+              { name: "purple", hex: "#B38BFA" },
+              { name: "pink", hex: "#FF79F2" },
+              { name: "aqua", hex: "#43E6FC" },
+              { name: "apricot", hex: "#F19576" },
+              { name: "blue", hex: "#0047FF" },
+              { name: "skyblue", hex: "#6691FF" },
+            ].map((item) => (
+              <span
+                key={item.hex}
+                onClick={() => setColor(item.hex)} 
+                className={`color-dot ${color === item.hex ? "active" : ""}`}
+                style={{ backgroundColor: item.hex }} 
+              ></span>
+            ))}
           </div>
         </div>
         <div className="create">
@@ -62,6 +53,7 @@ const Popup = ({ addGroup, close }) => {
           </button>
         </div>
       </div>
+          
     </div>
   );
 };

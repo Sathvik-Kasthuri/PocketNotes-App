@@ -1,42 +1,191 @@
-
 @media (max-width: 768px) {
+  /* ====== PAGE LAYOUT ====== */
   .container {
     flex-direction: column;
+    height: 100vh;
   }
 
-  .notes,
+  .notes {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .notebook.hidden,
+  .notes.hidden {
+    display: none;
+  }
+
   .notebook {
     width: 100%;
     height: 100vh;
   }
 
-  .notes.hidden {
-    display: none;
+  .notes-making {
+    width: 100%;
+    height: 100%;
   }
 
-  .notebook.hidden {
-    display: none;
+  /* ====== HEADER ====== */
+  .notes-header {
+    width: 100%;
+    height: 64px;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .group-initials-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .notes-header h2 {
+    font-size: 18px;
+  }
+
+  /* ====== BODY ====== */
+  .notes-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+  }
+
+  .note-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* ====== INPUT ====== */
+  .notes-input {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    padding: 8px;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    height: 100px;
+  }
+
+  .button {
+    bottom: 20px;
+    padding-right: 20px;
+  }
+
+  .plus-button {
+    width: 93px;
+    height: 93px;
+  }
+
+  .plus-icon {
+    font-size: 70px;
+  }
+
+  .modal-popup {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== POPUP CARD (exact figma size) ===== */
+  .group-container {
+    width: 284px;
+    height: 211px;
+    padding: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .popup-title {
+    font-size: 18.4px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .group-names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .group-names h3 {
+    font-size: 14.6px;
+    font-weight: 500;
+    width: 90px;
+  }
+
+  .group-names input {
+    width: 150px;
+    height: 23px;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 14px;
+  }
+
+  .color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .color h3 {
+    white-space: nowrap;
+    font-size: 14.6px;
+    font-weight: 500;
+    width: auto;
+    min-width: 90px;
+    line-height: 1;
+  }
+
+  .color-options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow: hidden;
+  }
+
+  .color-dot {
+    width: 17.67px;
+    height: 17.67px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  .color-dot.active {
+    border: 2px solid #0047ff;
+  }
+
+  /* ===== CREATE BUTTON (CENTERED LIKE FIGMA) ===== */
+  .create {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .create-btn {
+    width: 186px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #16008b;
   }
 }
 
+/* back button */
 .back-btn {
   background: none;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-right: 10px;
   color: white;
-}
-
-.notes-input {
-  position: sticky;
-  bottom: 0;
-  background: #0b3c91;
-  padding: 10px;
-}
-
-.plus-button {
-  position: sticky;
-  bottom: 20px;
-  float: right;
+  font-size: 22px;
+  cursor: pointer;
 }
