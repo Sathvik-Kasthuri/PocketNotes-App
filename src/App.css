@@ -1,5 +1,4 @@
 @media (max-width: 768px) {
-  /* ====== PAGE LAYOUT ====== */
   .container {
     flex-direction: column;
     height: 100vh;
@@ -45,7 +44,6 @@
     font-size: 18px;
   }
 
-  /* ====== BODY ====== */
   .notes-body {
     flex: 1;
     padding: 16px;
@@ -57,7 +55,6 @@
     padding: 16px;
   }
 
-  /* ====== INPUT ====== */
   .notes-input {
     width: 100%;
     position: sticky;
@@ -84,6 +81,14 @@
     font-size: 70px;
   }
 
+  .back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
   .modal-popup {
     padding: 0;
     display: flex;
@@ -91,7 +96,6 @@
     justify-content: center;
   }
 
-  /* ===== POPUP CARD (exact figma size) ===== */
   .group-container {
     width: 284px;
     height: 211px;
@@ -164,7 +168,6 @@
     border: 2px solid #0047ff;
   }
 
-  /* ===== CREATE BUTTON (CENTERED LIKE FIGMA) ===== */
   .create {
     position: static;
     margin-top: 10px;
@@ -179,13 +182,4 @@
     border-radius: 6px;
     background-color: #16008b;
   }
-}
-
-/* back button */
-.back-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
 }
